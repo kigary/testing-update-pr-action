@@ -1,0 +1,13 @@
+---
+on: [pull_request]
+
+jobs:
+  update-pr:
+    name: Update Pull Request from Branch name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Update Pull Request from Branch name action step
+        id: update-pr
+        uses: kigary/update-pr-from-branch-name@v1
