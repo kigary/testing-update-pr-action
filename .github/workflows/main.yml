@@ -10,4 +10,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Update Pull Request from Branch name action step
         id: update-pr
-        uses: kigary/update-pr-from-branch-name@v1
+        uses: kigary/update-pr-from-branch-name@v1.1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          branch-prefix: 'feature,bugfix'
+          branch-prefix-separator: '/'
+          jira-ticket-regex: '(FN-\d{1,4})'
+          jira-ticket-separator: '-'
