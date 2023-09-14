@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Update Pull Request from Branch name action step
         id: update-pr
-        uses: kigary/update-pr-from-branch-name@v1
+        uses: kigary/update-pr-from-branch-name@v0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           issue-ticket-regex: '(FN-\d{1,4})'
